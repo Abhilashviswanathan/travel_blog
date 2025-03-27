@@ -1,0 +1,15 @@
+{% extends 'navbar.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="container mt-5">
+    <form method="POST" enctype="multipart/form-data" class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 500px;">
+        <h2 style="text-align: center;"> Edit Blog </h2>
+        {% csrf_token %}
+        {{ frm.as_p }}  
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+
+{% endblock %}
